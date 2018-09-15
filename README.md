@@ -1,3 +1,20 @@
+# Visualization tool added
+
+For the purpose of observing how input image change to the target image, I add one tool script to visualize the intermediate conv layers. Each feature map in each layer's output is saved as one image. Through these feature map images, You can see the generator process closely. Maybe it can give you some intuition on some new ideas.
+
+Just see and run script as:
+
+```bash
+python test_model.py \
+    --name maps_cyclegan \
+    --dataroot ./datasets/maps \
+    --model cycle_gan
+```
+
+Images will be created and save in `debug_layer_images` dir.
+
+Original README is as follows:
+
 <img src='imgs/horse2zebra.gif' align="right" width=384>
 
 <br><br><br>
