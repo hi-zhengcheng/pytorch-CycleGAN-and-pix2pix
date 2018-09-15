@@ -1,17 +1,142 @@
 # Visualization tool added
 
-For the purpose of observing how input image change to the target image, I add one tool script to visualize the intermediate conv layers. Each feature map in each layer's output is saved as one image. Through these feature map images, You can see the generator process closely. Maybe it can give you some intuition on some new ideas.
+For the purpose of observing how input image change to the target image, I add one tool script to visualize the intermediate convolution layers. Each feature map in each layer's output can be extracted and can be saved as one image. Through these feature map images, You can see the generator process clearly. Maybe it can give you some intuition on some new ideas.
 
-Just see and run script as:
+Usage:
 
-```bash
-python test_model.py \
-    --name maps_cyclegan \
-    --dataroot ./datasets/maps \
-    --model cycle_gan
-```
+1. Train the model following the original README.
+2. Just see and run script as:
 
-Images will be created and save in `debug_layer_images` dir.
+    ```bash
+    python visualize_intermediate_layers.py \
+        --name maps_cyclegan \
+        --dataroot ./datasets/maps \
+        --model cycle_gan
+    ```
+    The script only use the first image in test data set as input.
+
+3. Images will be created and saved in `debug_layer_images` dir. For demo purpose, I just create one new dir named `visualize_layers_output` and copy some result images into this folder.
+
+4. After each layer's first channel is visualized as image, you can see the results like:
+* input image:
+
+    ![input_image](visualize_layers_output/input.jpg)
+
+* layer_0_channel_0
+
+    ![layer_0_channel_0](visualize_layers_output/layer_0_channel_0.jpg)
+
+* layer_1_channel_0
+
+    ![layer_1_channel_0](visualize_layers_output/layer_1_channel_0.jpg)
+
+* layer_2_channel_0
+
+    ![layer_2_channel_0](visualize_layers_output/layer_2_channel_0.jpg)
+
+* layer_3_channel_0
+
+    ![layer_3_channel_0](visualize_layers_output/layer_3_channel_0.jpg)
+
+* layer_4_channel_0
+
+    ![layer_4_channel_0](visualize_layers_output/layer_4_channel_0.jpg)
+
+* layer_5_channel_0
+
+    ![layer_5_channel_0](visualize_layers_output/layer_5_channel_0.jpg)
+
+* layer_6_channel_0
+
+    ![layer_6_channel_0](visualize_layers_output/layer_6_channel_0.jpg)
+
+* layer_7_channel_0
+
+    ![layer_7_channel_0](visualize_layers_output/layer_7_channel_0.jpg)
+
+* layer_8_channel_0
+
+    ![layer_8_channel_0](visualize_layers_output/layer_8_channel_0.jpg)
+
+* layer_9_channel_0
+
+    ![layer_9_channel_0](visualize_layers_output/layer_9_channel_0.jpg)
+
+* layer_10_channel_0
+
+    ![layer_10_channel_0](visualize_layers_output/layer_10_channel_0.jpg)
+
+* layer_11_channel_0
+
+    ![layer_11_channel_0](visualize_layers_output/layer_11_channel_0.jpg)
+
+* layer_12_channel_0
+
+    ![layer_12_channel_0](visualize_layers_output/layer_12_channel_0.jpg)
+
+* layer_13_channel_0
+
+    ![layer_13_channel_0](visualize_layers_output/layer_13_channel_0.jpg)
+
+* layer_14_channel_0
+
+    ![layer_14_channel_0](visualize_layers_output/layer_14_channel_0.jpg)
+
+* layer_15_channel_0
+
+    ![layer_15_channel_0](visualize_layers_output/layer_15_channel_0.jpg)
+
+* layer_16_channel_0
+
+    ![layer_16_channel_0](visualize_layers_output/layer_16_channel_0.jpg)
+
+* layer_17_channel_0
+
+    ![layer_17_channel_0](visualize_layers_output/layer_17_channel_0.jpg)
+
+* layer_18_channel_0
+
+    ![layer_18_channel_0](visualize_layers_output/layer_18_channel_0.jpg)
+
+* layer_19_channel_0
+
+    ![layer_19_channel_0](visualize_layers_output/layer_19_channel_0.jpg)
+
+* layer_20_channel_0
+
+    ![layer_20_channel_0](visualize_layers_output/layer_20_channel_0.jpg)
+
+* layer_21_channel_0
+
+    ![layer_21_channel_0](visualize_layers_output/layer_21_channel_0.jpg)
+
+* layer_22_channel_0
+
+    ![layer_22_channel_0](visualize_layers_output/layer_22_channel_0.jpg)
+
+* layer_23_channel_0
+
+    ![layer_23_channel_0](visualize_layers_output/layer_23_channel_0.jpg)
+
+* layer_24_channel_0
+
+    ![layer_24_channel_0](visualize_layers_output/layer_24_channel_0.jpg)
+
+* layer_25_channel_0
+
+    ![layer_25_channel_0](visualize_layers_output/layer_25_channel_0.jpg)
+
+* layer_26_channel_0
+
+    ![layer_26_channel_0](visualize_layers_output/layer_26_channel_0.jpg)
+
+* layer_27_channel_0
+
+    ![layer_27_channel_0](visualize_layers_output/layer_27_channel_0.jpg)
+
+* output_image
+
+    ![output_image](visualize_layers_output/output.jpg)
 
 Original README is as follows:
 
